@@ -32,6 +32,8 @@ public class ConfigTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         WebDriverRunner.setWebDriver(driver);
+        open("https://swoop.ge");
+        Configuration.assertionMode = AssertionMode.SOFT;
 
 
     }

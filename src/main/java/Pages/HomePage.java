@@ -11,9 +11,7 @@ public class HomePage {
     public SelenideElement dasveneba = $(By.linkText("დასვენება"));
 
 
-    public SelenideElement getRest() {
-        return dasveneba;
-    }
+
 
 
 }

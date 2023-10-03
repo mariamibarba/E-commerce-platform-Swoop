@@ -5,6 +5,7 @@
 *.mdmp
 target/
 build/
+allure-results/
 *.ipr
 *.iml
 *.iws
