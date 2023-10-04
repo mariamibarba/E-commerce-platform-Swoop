@@ -35,7 +35,7 @@ public class SushiPageSteps {
         return this;
     }
 
-    @Step("Validation of sold charts")
+    @Step("check of sold charts")
     public SushiPageSteps checkingSoldCharts() {
 
         String soldText = sushiPage.soldAmount.get(0).getText();
@@ -63,19 +63,19 @@ public class SushiPageSteps {
         return this;
     }
 
-    @Step("Click sorting")
+    @Step("Click sorting button")
     public SushiPageSteps clickSorting() {
         sushiPage.sort.click();
         return this;
     }
 
-    @Step("Click decreasing")
+    @Step("decreasing")
     public SushiPageSteps decreasing() {
         sushiPage.decreasingPrice.click();
         return this;
     }
 
-    @Step("Check decreasing sort output")
+    @Step("Check decreasing result ")
     public SushiPageSteps checkingDecreasingSort() {
 
         String firstSushi = sushiPage.sushiPrices.get(0).getText().replace("₾", "");
@@ -87,7 +87,6 @@ public class SushiPageSteps {
         softAssert.assertEquals(true, firstSushiPrice > secondSushiPrice);
         softAssert.assertAll();
         return this;
-
 
     }
 

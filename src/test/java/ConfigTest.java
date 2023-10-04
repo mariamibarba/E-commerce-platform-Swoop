@@ -2,6 +2,8 @@ import com.codeborne.selenide.AssertionMode;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -25,7 +27,10 @@ public class ConfigTest {
         Configuration.screenshots = true;
 
     }
-    @BeforeMethod
+
+    @BeforeMethod(alwaysRun = true)
+    @Story("Opening url for all tests")
+    @Description("Maximize browsers windows")
     public void setUp() {
 
         WebDriverManager.chromedriver().setup();
@@ -40,6 +45,7 @@ public class ConfigTest {
 
 
     @AfterMethod
+    @Description("Quits browser")
     public void tearDown() {
         driver.quit();
     }

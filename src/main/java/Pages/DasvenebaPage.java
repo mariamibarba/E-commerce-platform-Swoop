@@ -15,19 +15,5 @@ public class DasvenebaPage {
     public ElementsCollection prices = $$(By.xpath("//div[@class= 'discounted-prices']//p[1]"));
 
 
-    public SelenideElement getMinPrice() {
-        return minPrice;
-    }
 
-    public SelenideElement getMaxPrice() {
-        return maxPrice;
-    }
-
-    public SelenideElement getSearchButton() {
-        return searchButton;
-    }
-
-    public ElementsCollection getPrices() {
-        return prices;
-    }
 }

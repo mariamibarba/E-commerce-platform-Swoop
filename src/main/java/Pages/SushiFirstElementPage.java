@@ -7,5 +7,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SushiFirstElementPage {
     public SelenideElement shareButton = $(".share");
+    public SelenideElement facebookLoginForm = $("#loginform");
 
 }

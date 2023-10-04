@@ -20,14 +20,6 @@ public class SushiPage {
     public SelenideElement test = $(By.xpath("//*[@id=\"partialid\"]/section/div[1]/div[1]/a/img"));
 
 
-
-
-
-
-
-
-
-
     public List<SelenideElement> soldAmount = $$(By.xpath("//p[contains(text(), 'გაყიდულია')]"));
     public List<SelenideElement> soldDiagram = $$(By.xpath("//div[@class = 'voucher-diagram']//div"));
     public List<SelenideElement> sushiPrices = $$("div.discounted-prices p:first-child");

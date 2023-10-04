@@ -10,23 +10,23 @@ public class DasvenebaPageSteps {
     PriceData priceData = new PriceData();
     DasvenebaPage dasvenebaPage = new DasvenebaPage();
 
+    @Step("Min price")
 
-    @Step
     public DasvenebaPageSteps setMinPrice(){
-        dasvenebaPage.getMinPrice().sendKeys(String.valueOf(priceData.getMinPrice()));
+        dasvenebaPage.minPrice.sendKeys(String.valueOf(priceData.getMinPrice()));
 
         return this;
 
     }
-    @Step
+    @Step("Max price")
     public DasvenebaPageSteps setMaxPrice(){
-        dasvenebaPage.getMaxPrice().sendKeys(String.valueOf(priceData.getMaxPrice()));
+        dasvenebaPage.maxPrice.sendKeys(String.valueOf(priceData.getMaxPrice()));
         return this;
 
     }
-    @Step
+    @Step("click search button")
     public DasvenebaPageSteps clickOnSearch (){
-        dasvenebaPage.getSearchButton().click();
+        dasvenebaPage.searchButton.click();
         return this;
 
 
