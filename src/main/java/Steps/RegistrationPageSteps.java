@@ -3,6 +3,8 @@ package Steps;
 import Pages.RegistrationPage;
 import io.qameta.allure.Step;
 
+import java.util.Date;
+
 public class RegistrationPageSteps {
    RegistrationPage registrationPage = new RegistrationPage();
     @Step ("click on შესვლა")
@@ -39,8 +41,8 @@ public class RegistrationPageSteps {
     }
 
     @Step ("set date")
-    public RegistrationPageSteps setDate (String date){
-        registrationPage.dateOfBirth.sendKeys(date);
+    public RegistrationPageSteps setData (Date dateOfBirth){
+        registrationPage.dateOfBirth.sendKeys(dateOfBirth.toString());
         return this;
     }
     @Step ("set password")

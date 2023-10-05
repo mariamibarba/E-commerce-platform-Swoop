@@ -1,15 +1,15 @@
 package Util;
 
+import Data.UserData;
 import io.qameta.allure.Step;
 
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import Data.UserData;
-
 
 public class DB {
+
     UserData userData = new UserData();
 
     @Step

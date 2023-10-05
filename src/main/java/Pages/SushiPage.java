@@ -15,9 +15,11 @@ public class SushiPage {
     public SelenideElement firstFavProduct = firstProduct.$(byClassName("deal-box-wishlist"));
     public SelenideElement loginPage = $(".login");
     public SelenideElement closeButton = $("div[class='close-button'] a");
+
     public SelenideElement sort = $("#sort");
     public SelenideElement decreasingPrice = $(byXpath("//option[contains(text(),'ფასით კლებადი')]"));
-    public SelenideElement test = $(By.xpath("//*[@id=\"partialid\"]/section/div[1]/div[1]/a/img"));
+
+    public SelenideElement firstelement = $(By.xpath("//*[@id=\"partialid\"]/section/div[1]/div[1]/a/img"));
 
 
     public List<SelenideElement> soldAmount = $$(By.xpath("//p[contains(text(), 'გაყიდულია')]"));

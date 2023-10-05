@@ -92,7 +92,7 @@ public class SushiPageSteps {
 
     @Step("Click Sushi")
     public SushiPageSteps clickingSushi() {
-        sushiPage.test.click();
+        sushiPage.firstelement.click();
         return this;
     }
 

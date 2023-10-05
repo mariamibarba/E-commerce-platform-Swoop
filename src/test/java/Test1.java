@@ -16,6 +16,8 @@ import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.Date;
+
 
 @Epic("swoop.ge- ის გატესტვა სხვადასხვა კრიტერიუმების მიხედვით")
 @Feature("dasveneba and kveba pages")
@@ -27,11 +29,8 @@ public class Test1 extends ConfigTest {
     SoftAssert softAssert = new SoftAssert();
     CategoryPageSteps categoryPageSteps = new CategoryPageSteps();
     SushiPageSteps sushiPageSteps = new SushiPageSteps();
-    SushiPage sushiPage = new SushiPage();
     SushiFirstElementPageSteps sushiFirstElementPageSteps = new SushiFirstElementPageSteps();
     RegistrationPageSteps registrationPageSteps = new RegistrationPageSteps();
-    RegistrationPage registrationPage = new RegistrationPage();
-
     DB db = new DB();
 
 
@@ -125,14 +124,14 @@ public class Test1 extends ConfigTest {
     @Test(testName = "fifth-method-test DB test", groups = "Resgression2", dataProvider = "DB", dataProviderClass = DataProvider.class)
     @Story("fill registration forms with information which we have in database")
     @Description("fill the form with dataprovider")
-    public void testThree(String firstname, String lastName, String phone, String email, String date, String password) {
+    public void testfivth(String firstname, String lastName, String phone, String email, Date date, String password) {
         registrationPageSteps.clickOnopenRegisterform();
         registrationPageSteps.clickOnRegister()
                 .setFirstName(firstname)
                 .setLastName(lastName)
                 .setMobile(phone)
                 .setEmail(email)
-                .setDate(date)
+                .setData(date)
                 .setPassword(password)
                 .confirmPassword(password)
                 .checkTerms()
